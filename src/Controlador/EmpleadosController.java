@@ -26,6 +26,7 @@ public class EmpleadosController implements ActionListener {
         this.ModeloConeccion = ModeloConeccion;
         
         this.VistaPrincipal.btnEntrar.addActionListener(this);
+        
         this.VistaEmpleados.btnAgregar1.addActionListener(this);
         this.VistaEmpleados.btnEditar.addActionListener(this);
         this.VistaEmpleados.btnActualizar.addActionListener(this);
@@ -34,17 +35,27 @@ public class EmpleadosController implements ActionListener {
         this.VistaPrincipal.setExtendedState(frmPrincipal.MAXIMIZED_BOTH);
         this.VistaPrincipal.setVisible(true);
         
+          this.ModeloConeccion.Conectar();
+        this.VistaEmpleados.setVisible(true);
+       
+            
+            
+        
+        
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        /*
         if(e.getSource()==this.VistaPrincipal.btnEntrar)
         {
-            this.ModeloConeccion.Conectar("","");
+            this.ModeloConeccion.Conectar();
             
             this.VistaEmpleados.setVisible(true);this.VistaEmpleados.setBackground(Color.green);
         }
-    }
+    }*/
     
     
+}
+
 }

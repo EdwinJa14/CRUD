@@ -6,17 +6,17 @@ import javax.swing.JOptionPane;
 
 public class Conexion {
    Connection conexion;
-    public Connection Conectar(String user, String pass)
+    public Connection Conectar()
     {
         try
         {
             DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver()); 
-            String nombre_servidor = "localhost";
+            String nombre_servidor = "168.234.74.80";
             String numero_puerto = "1521";
-            String sid = "xe";
+            String sid = "umg";
             String url = "jdbc:oracle:thin:@" + nombre_servidor + ":" + numero_puerto + ":" + sid;
 
-            conexion = DriverManager.getConnection(url,"SYSTEM","9820");
+            conexion = DriverManager.getConnection(url,"HA9","Umg$2023");
             JOptionPane.showMessageDialog(null, "Conexion Exitosa!!!");
             return conexion;
         }
@@ -29,4 +29,6 @@ public class Conexion {
         
         
     }
+    
+   
 }
