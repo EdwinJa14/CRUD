@@ -5,6 +5,11 @@
  */
 package crudjavier;
 
+import Controlador.EmpleadosController;
+import Modelos.Conexion;
+import Vistas.frmEmpleado;
+import Vistas.frmPrincipal;
+
 /**
  *
  * @author umg
@@ -16,6 +21,10 @@ public class CRUDjavier {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+         frmPrincipal VistaPrincipal = new frmPrincipal();
+    frmEmpleado VistaEmpleados =  new frmEmpleado(null,true);
+    Conexion ModeloConexion = new Conexion();
+    EmpleadosController Controlador = new EmpleadosController(VistaPrincipal, VistaEmpleados, ModeloConexion);
     }
     
 }
